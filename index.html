@@ -1,0 +1,82 @@
+<!DOC vmTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="module" src="./scripts/course.js" ></script>
+    <script type="module" src="./scripts/dataCourses.js" ></script>
+    <script type="module" src="./scripts/main.js"></script>
+</head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Boris Castellanos Matamoros</h1>
+                    <img class="img-fluid max-width: 100% height: auto" src="./avatar.png" alt="Avatar" style="border-radius: 50%;">
+                    <div class="col" style="border: solid 1px gray; margin-top: 10px;">
+                    <h2 >Datos Personales</h2>
+                    <table  style=" width: 100%; ">
+                        <tbody>
+                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
+                                <td>Código</td>
+                                <td>201833683</td>
+                            </tr>
+                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
+                                <td>Cédula</td>
+                                <td>1006874062</td>
+                            </tr>
+                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
+                                <td>Edad</td>
+                                <td>20 Años</td>
+                            </tr>
+                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
+                                <td>Barrio</td>
+                                <td>Ciudad Salitre</td>
+                            </tr>
+                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
+                                <td>Teléfono</td>
+                                <td>3208707220</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="col justify-content-center"  style="border: solid 1px gray; height: 40%; width: auto; margin-top: 2vw; text-align: center;">
+                    
+                    <form style="margin:10px;">
+                        <div class="form-row">
+                          <div class="col">
+                              <input type="text" class="form-control" id="search-box" placeholder="Filtrar por nombre">
+                          </div>
+                          <div class="col">
+                              <button type="button" id="button-filterByName" class="btn btn-success">Aplicar</button>
+                          </div>
+                        </div>
+                    </form>
+                    
+                    <h2 >Cursos Actuales</h2>
+                    <table class="table" style="max-width: 100%">
+                        <thead class="thead-dark">
+                           <tr>
+                              <th>Curso</th>
+                              <th>Profesor</th>
+                              <th>Créditos</th>
+                           </tr>
+                        </thead>
+                        <tbody id="courses">
+                        </tbody>
+                    </table>
+                    <div class="row">
+                    <div class="col-7" style="text-align: right;"><h5>Total Creditos:</h5></div>
+                    <div class="col" id ="total-credits" style="width: 100%; text-align: left;">
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </body>
+</html>

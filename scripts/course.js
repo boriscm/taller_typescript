@@ -7,3 +7,11 @@ var Course = /** @class */ (function () {
     return Course;
 }());
 export { Course };
+var EstudianteData = /** @class */ (function () {
+    function EstudianteData(tipo, dato) {
+        this.tipo = tipo;
+        this.dato = dato;
+    }
+    return EstudianteData;
+}());
+export { EstudianteData };

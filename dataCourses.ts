@@ -1,5 +1,7 @@
 import { Course } from './course.js';
 
+import { EstudianteData } from './course.js'
+
 export const dataCourses = [
   new Course("Desarrollo de Sw", "Cesar Augusto Forero", 3),
   new Course("Algebra Lineal", "Carolina Benedetti", 3),
@@ -12,3 +14,10 @@ export const dataCourses = [
   new Course("Understanding Society", "Gregory Lobo", 2)
 ]
 
+export const dataEstudiante =[
+  new EstudianteData("Código","	201833683"),
+  new EstudianteData("Cédula","1006874062"),
+  new EstudianteData("Edad","20 Años"),
+  new EstudianteData("Barrio","Ciudad Salitre"),
+  new EstudianteData("Teléfono","	3208707220"),
+]

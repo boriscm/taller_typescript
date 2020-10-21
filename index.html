@@ -17,28 +17,8 @@
                     <img class="img-fluid max-width: 100% height: auto" src="./avatar.png" alt="Avatar" style="border-radius: 50%;">
                     <div class="col" style="border: solid 1px gray; margin-top: 10px;">
                     <h2 >Datos Personales</h2>
-                    <table  style=" width: 100%; ">
-                        <tbody>
-                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
-                                <td>Código</td>
-                                <td>201833683</td>
-                            </tr>
-                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
-                                <td>Cédula</td>
-                                <td>1006874062</td>
-                            </tr>
-                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
-                                <td>Edad</td>
-                                <td>20 Años</td>
-                            </tr>
-                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
-                                <td>Barrio</td>
-                                <td>Ciudad Salitre</td>
-                            </tr>
-                            <tr style=" border-top: 1px solid rgb(194, 194, 194); height: 3vw;">
-                                <td>Teléfono</td>
-                                <td>3208707220</td>
-                            </tr>
+                    <table class="table" style="max-width: 100%">
+                        <tbody id="estudiante">
                         </tbody>
                     </table>
                     </div>
@@ -53,6 +33,18 @@
                           <div class="col">
                               <button type="button" id="button-filterByName" class="btn btn-success">Aplicar</button>
                           </div>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="col-3">
+                                <input type="text" class="form-control" id="min-serch" placeholder="min credito">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" id="max-serch" placeholder="max credito">
+                            </div>
+                            <div class="col">
+                                <button type="button" id="button-filterByCredit" class="btn btn-success">#creditos</button>
+                              </div>
                         </div>
                     </form>
                     

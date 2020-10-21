@@ -11,3 +11,13 @@ export class Course
     }
 }
 
+export class EstudianteData
+{
+  tipo: string;
+  dato: string;
+  constructor(tipo: string, dato: string){
+    this.tipo = tipo;
+    this.dato = dato;
+  }
+}
+

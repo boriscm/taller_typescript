@@ -1,19 +1,41 @@
 import { Course } from './course.js';
-
+import { EstudianteData } from './course.js'
 
 import { dataCourses } from './dataCourses.js';
+import { dataEstudiante } from './dataCourses.js';
 
 let coursesTbody: HTMLElement = document.getElementById('courses')!;
+let estudianteTbody: HTMLElement = document.getElementById('estudiante')!;
 const btnfilterByName: HTMLElement = document.getElementById("button-filterByName")!;
+const btnfilterByCredits: HTMLElement = document.getElementById("button-filterByCredit")!;
 const inputSearchBox: HTMLInputElement = <HTMLInputElement> document.getElementById("search-box")!;
+const minbox: HTMLInputElement = <HTMLInputElement> document.getElementById("min-serch")!;
+const maxbox: HTMLInputElement = <HTMLInputElement> document.getElementById("max-serch")!;
 const totalCreditElm: HTMLElement = document.getElementById("total-credits")!;
 
 
-btnfilterByName.onclick = () => applyFilterByName();
-
 renderCoursesInTable(dataCourses);
 
+renderStudentInTable(dataEstudiante);
+
 totalCreditElm.innerHTML = `${getTotalCredits(dataCourses)}`
+
+btnfilterByName.onclick = () => applyFilterByName();
+
+btnfilterByCredits.onclick = () => applyFilterByCredit();
+
+
+
+function renderStudentInTable(estudiante: EstudianteData[]): void{
+  console.log('Desplegando datos de estudiante');
+  estudiante.forEach((dato) => {
+    let trElement = document.createElement("tr");
+    trElement.innerHTML = `<td>${dato.tipo}</td>
+                           <td>${dato.dato}</td>`;
+    estudianteTbody.appendChild(trElement);
+  });
+}
+
 
 
 function renderCoursesInTable(courses: Course[]): void {
@@ -26,9 +48,27 @@ function renderCoursesInTable(courses: Course[]): void {
     coursesTbody.appendChild(trElement);
   });
 }
- 
 
- 
+function applyFilterByCredit(){
+  let numMin =parseInt(minbox.value);
+  let numMax =parseInt(maxbox.value);
+  clearCoursesInTable();
+
+  if(numMax == null || numMin==null){
+
+  }
+  else{
+  let val: Course[] = searchCourseByCredit(numMax, numMin, dataCourses);
+  renderCoursesInTable(val);
+  }
+
+
+}
+
+function searchCourseByCredit(max: Number, min: Number,courses: Course[]){
+  
+  return courses.filter(c => (c.credits >= min && c.credits <= max));
+}
 
 function applyFilterByName() { 
   let text = inputSearchBox.value;
